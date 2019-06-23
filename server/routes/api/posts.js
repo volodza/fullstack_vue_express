@@ -27,7 +27,6 @@ router.delete('/:id', async (req,res) => {
 async function getPosts () {
     const uri = "mongodb+srv://abc123:Vkfltytwjou9df9@vueexpress-nq8xi.mongodb.net/test?retryWrites=true&w=majority";
     const client = await mongodb.MongoClient.connect(uri,{ useNewUrlParser: true })
-
     return client.db("vueExpress").collection("posts");
 }
 
